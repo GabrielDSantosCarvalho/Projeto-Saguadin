@@ -21,5 +21,6 @@ CREATE TABLE cliente(
     cli_cpf VARCHAR(20) NOT NULL,
     cli_curso VARCHAR(50) NOT NULL,
     cli_sala INT NOT NULL,
+    cli_saldo FLOAT(10,2),
     cli_status CHAR(1)
 );
