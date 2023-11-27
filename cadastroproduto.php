@@ -20,7 +20,7 @@
             
             mysqli_query($link, $sql);
             echo"<script>window.alert('PRODUTO CADASTRADO COM SUCESSO');</script>";
-            echo"<script>window.location.href='listarprodutos.php';</script>";
+            echo"<script>window.location.href='cadastroproduto.php';</script>";
         }
         else {
             echo"<script>window.alert('PRODUTO JÁ EXISTENTE');</script>";
@@ -33,10 +33,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="estilao.css">
+    <link rel="stylesheet" type="text/css" href="cli.css">
     <title>Cadastra Produto</title>
 </head>
-<body> <br><br><br><br><br><br><br><br><br>
+<body> <br><br><br><br><br>
     <div id="container">
         <form action="cadastroproduto.php" method="post">
             <label>NOME PRODUTO</label>
