@@ -10,14 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cpf = $_POST['cpf'];
     $sala = $_POST['sala'];
     $curso = $_POST['curso'];
-    $senha = $_POST['senha'];
-    $sala = $_POST['salsa'];
+    
 
-    if (preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d])/', $senha)) 
-        #(?=.*[a-z]): Pelo menos 1 letra minúscula.
-        #(?=.*[A-Z]): Pelo menos 1 letra maiúscula.
-        #(?=.*\d): Pelo menos 1 numeral.
-        #(?=.*[^a-zA-Z\d]): Pelo menos 1 caractere especial 
 
     #PASSANDO INSTRUÇÕES SQL PARA O BANCO
     #VALIDANDO SE CLIENTE EXISTE
@@ -31,12 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>window.alert('CLIENTE JÁ CADASTRADO!');</script>";
     } else {
         #adicionar a salsa
-        $salsa = md5(rand() . date('H:i:s'));
-        $senha = md5($senha . $salsa);
+       // $salsa = md5(rand() . date('H:i:s'));
+        //$senha = md5($senha . $salsa);
 
 
-        $sql = "INSERT INTO clientes (cli_nome, cli_senha, cli_email, cli_telefone, cli_sala, cli_curso, cli_status, cli_salsa) 
-        VALUES('$nome', '$senha', '$email', '$telefone', '$sala', '$curso', 's', '$salsa')";
+        $sql = "INSERT INTO clientes (cli_nome, cli_email, cli_telefone, cli_sala, cli_curso, cli_status, cli_salsa) 
+        VALUES('$nome', '$email', '$telefone', '$sala', '$curso', 's', '$salsa')";
         mysqli_query($link, $sql);
 
         echo($sql);
@@ -60,8 +54,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h3>CADASTRA AQUI!!</h3>
         <input type = "text" name = "nome" id = "nome" 
         placeholder="nome de cliente">
-        <p></p>
-        <input type="password" name="senha" id="senha" placeholder="Senha">
         <p></p>
         <input type="text" name="cpf" id="cpf" placeholder="CPF">
         <p></p>
