@@ -1,5 +1,4 @@
 <?php
-session_start();
  
 include("cabecalho4.php");
  
@@ -35,13 +34,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     VALUES ($sql, NOW())";
     mysqli_query($link, $sqllog);
  
-    while($tbl = mysqli_fetch_array($retorno)){
-        $_SESSION['idusuario'] = $tbl[0];
-        $_SESSION['nomeusuario'] = $tbl[1];
-    }
+       }
         echo"<script>window.location.href='backoffice.php';</script>";
     }
  
-}
+
  
 ?>

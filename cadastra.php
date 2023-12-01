@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
     $key = RAND(100000, 999999);
  
-    #INSERIR INSTRUÇÕES NO BANCO
+    #INSERIR INSTRUÃ‡Ã•ES NO BANCO
     $sql = "SELECT COUNT(usu_id) FROM usuarios WHERE usu_email = '$email' OR usu_login = '$login'";
     $resultado = mysqli_query($link, $sql);
     $resultado = mysqli_fetch_array($resultado)[0];
