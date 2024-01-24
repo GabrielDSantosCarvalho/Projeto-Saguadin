@@ -1,6 +1,6 @@
 <?php
 #conecta com o servidor (xampp)
-$servidor = "localhost";
+$servidor = "127.0.0.1";
 #nome do banco
 $banco = "saguadim";
 #nome do usuario

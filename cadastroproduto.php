@@ -53,6 +53,8 @@
             <input type="date" name="val" id="val">
             
             <select name="fornecedor" id="fornecedor" required>
+                
+            <br><br><br><br>
                 <?php 
 
                 $sql = "SELECT for_id, for_nome FROM fornecedor";

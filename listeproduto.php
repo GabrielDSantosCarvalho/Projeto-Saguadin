@@ -79,7 +79,7 @@ if (mysqli_num_rows($retorno) > 0) {
             <td> <?= $tbl['pro_val'] ?></td>
             <td><?= $tbl['pro_quant'] ?></td>
             <td><?= $tbl['pro_status'] == 's' ? 'Não' : 'Sim' ?></td>
-            <td><a href="alteraproduto.php?id=<?= $tbl[0] ?>"><input type="button" value="ALTERAR DADOS"> </a> </td>
+            <td><a href="altera_produto.php?id=<?= $tbl[0] ?>"><input type="button" value="ALTERAR DADOS"> </a> </td>
            
             
 

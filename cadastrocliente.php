@@ -4,12 +4,13 @@ include("cabecalho4.php");
 
 #COLETA DE VARIÁVEIS VIA FORMULÁRIO DE HTML
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $telefone = $_POST['telefone'];
-    $cpf = $_POST['cpf'];
-    $sala = $_POST['sala'];
-    $curso = $_POST['curso'];
+    $nome = $_POST["nome"];
+    $email = $_POST["email"];
+    $telefone = $_POST["telefone"];
+    $cpf = $_POST["cpf"];
+    $sala = $_POST["sala"];
+    $curso = $_POST["curso"];
+    
     
 
 
@@ -29,11 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //$senha = md5($senha . $salsa);
 
 
-        $sql = "INSERT INTO clientes (cli_nome, cli_email, cli_telefone, cli_sala, cli_curso, cli_status, cli_salsa) 
-        VALUES('$nome', '$email', '$telefone', '$sala', '$curso', 's', '$salsa')";
+        $sql = "INSERT INTO clientes (cli_nome, cli_email, cli_telefone, cli_cpf, cli_curso, cli_sala, cli_status) 
+        VALUES('$nome', '$email', '$telefone', '$cpf', '$curso', '$sala', 's')";
+        echo($sql);
         mysqli_query($link, $sql);
 
-        echo($sql);
+       
 
         echo "<script>window.alert('CLIENTE CADASTRADO');</script>";
         echo "<script>window.location.href='cadastrocliente.php';</script>";

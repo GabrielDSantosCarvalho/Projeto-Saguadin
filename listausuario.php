@@ -12,11 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 if ($status == "all") {
-    $sql = "SELECT * FROM clientes";
+    $sql = "SELECT * FROM usuarios";
 } elseif ($status == 'n') {
-    $sql = "SELECT * FROM clientes WHERE cli_status = 's'";
+    $sql = "SELECT * FROM usuarios WHERE usu_status = 's'";
 } else {
-    $sql = "SELECT * FROM clientes WHERE cli_status = 'n'";
+    $sql = "SELECT * FROM usuarios WHERE usu_status = 'n'";
 }
 
 
@@ -29,13 +29,13 @@ $retorno = mysqli_query($link, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTAR DE CLIENTES</title>
+    <title>LISTA DE USUARIOS</title>
     <link rel="stylesheet" type="text/css" href="cli.css">
 </head>
 
 <body>
     <div id="background">
-        <form action="listecliente.php" method="post">
+        <form action="listausuario.php" method="post">
             <input type="radio" name="status" class="radio" value="s" required onclick="submit()" <?= $status == "s" ? "checked" : "" ?>>INATIVOS
             <br>
             <input type="radio" name="status" class="radio" value="n" required onclick="submit()" <?= $status == "n" ? "checked" : "" ?>>ATIVOS
@@ -46,11 +46,10 @@ $retorno = mysqli_query($link, $sql);
         <div class="container">
             <table border="1">
                 <tr>
-                    <th>NOME</th>
-                    <th>SALA</th>
-                    <th>CURSO</th>
+                    <th>Login</th>
+                     <th>ATIVO</th>
                     <th>ALTERAR DADOS</th>
-                    <th>ATIVO</th>
+                   
                 </tr>
                 <?php
                 while ($tbl = mysqli_fetch_array($retorno)) {
@@ -58,10 +57,9 @@ $retorno = mysqli_query($link, $sql);
                     <tr>
                         
                         <td><?= $tbl[1] ?></td>
-                        <td><?= $tbl['cli_sala'] ?></td>
-                        <td><?= $tbl['cli_curso'] ?></td>
-                        <td><a href="altera_clientes.php?id=<?= $tbl[0] ?>"><input type="button" value="CLIQUE PRA  ALTERAR"> </a></td>
-                        <td><?= $check = ($tbl[7] == "n") ? "NÃO" : "SIM" ?></td>
+                        <td><?= $check = ($tbl[3] == "n") ? "NÃO" : "SIM" ?></td>
+                        <td><a href="altera_usuario.php?id=<?= $tbl[0] ?>"><input type="button" value="CLIQUE PRA  ALTERAR"> </a></td>
+                        
                     </tr>
                 <?php
                 }
