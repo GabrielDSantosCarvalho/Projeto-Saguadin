@@ -46,7 +46,7 @@ $retorno = mysqli_query($link, $sql);
         <div class="container">
             <table border="1">
                 <tr>
-                    <th>Login</th>
+                    <th>LOGIN</th>
                      <th>ATIVO</th>
                     <th>ALTERAR DADOS</th>
                    

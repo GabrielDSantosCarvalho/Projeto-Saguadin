@@ -43,25 +43,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div id="background">
         <form action="listeproduto.php" method="post">
-            <input type="radio" name="status" class="radio" value="s" required onclick="submit()" <?= $status == "s" ? "checked" : "" ?>>Inativos
+            <input type="radio" name="status" class="radio" value="s" required onclick="submit()" <?= $status == "s" ? "checked" : "" ?>>INATIVOS
             <br>
-            <input type="radio" name="status" class="radio" value="n" required onclick="submit()" <?= $status == "n" ? "checked" : "" ?>>Ativos
+            <input type="radio" name="status" class="radio" value="n" required onclick="submit()" <?= $status == "n" ? "checked" : "" ?>>ATIVOS
             <br>
-            <input type="radio" name="status" class="radio" value="all" required onclick="submit()" <?= $status == "all"? "checked" : "" ?>>Mostrar Todos
+            <input type="radio" name="status" class="radio" value="all" required onclick="submit()" <?= $status == "all"? "checked" : "" ?>>MOSTRAR TODOS
             <br>
             <br>
         </form>
         <div class="container">
             <table border="1">
                 <tr>
-                    <th>Nome</th>
-                    <th>Descrição</th>
-                    <th>Preço</th>
-                    <th>Custo</th>
-                    <th>Validade</th>
-                    <th>Quantidade</th>
-                    <th>Ativo</th>  
-                    <th>Alterar Dados</th>
+                    <th>NOME</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>PREÇO</th>
+                    <th>CUSTO</th>
+                    <th>VALIDADE</th>
+                    <th>QUANTIDADE</th>
+                    <th>ATIVO</th>  
+                    <th>ALTERAR DADOS</th>
                     
                     
                     

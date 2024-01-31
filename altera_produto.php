@@ -76,8 +76,8 @@
             <label>STATUS: <?= $check = ($status == 's') ? "ATIVO" : "INATIVO" ?></label>
             <p></p>
             <input type="date" name="val" id="val">
-            <input type="radio" name="status" value="s" <?= $status == "s" ? "checked" : "" ?>>ATIVO<br>
-            <input type="radio" name="status" value="n" <?= $status == "n" ? "checked" : "" ?>>INATIVO<br>
+            <input type="radio" name="status" value="s" <?= $status == "s" ? "checked" : "" ?>>INATIVO<br>
+            <input type="radio" name="status" value="n" <?= $status == "n" ? "checked" : "" ?>>ATIVO<br>
             <br>
             <select name="fornecedor" id="fornecedor" required>
                 

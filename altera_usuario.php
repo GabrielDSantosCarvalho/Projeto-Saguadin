@@ -42,13 +42,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="cli.css">
-    <title>altera usuario</title>
+    <title>ALTERA USUARIO</title>
 </head>
 <body>
     <div>
         <form action="altera_usuario.php" method="post">
             <input type="hidden" name="id" value="<?= $id ?>">
-            <label>Login:</label>
+            <label>LOGIN:</label>
             <input type="text" name="login" value="<?= $login ?>" required>
             <p></p>
             <label>STATUS: <?= $check = ($status == 's') ? "ATIVO" : "INATIVO" ?></label>
